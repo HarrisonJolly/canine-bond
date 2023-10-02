@@ -292,6 +292,78 @@ section.about-me {
     width: 75%;
 }
 
+.wrapper {
+    background-color: #ffffff;
+    position: relative;
+    width: 80vw;
+    max-width: 41em;
+    min-height: 25em;
+    border-radius: 0.6em;
+    box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+    display: flex;
+}
+
+.wrapper button {
+    font-size: 1.8em;
+    height: 2.2em;
+    width: 2.2em;
+    background-color: #ffffff;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+    color: #0a69ed;
+    box-shadow: 0 0 1em rgba(1, 17, 39, 0.25);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.testimonial-container {
+    width: 85%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    padding: 1.8em 1.2em;
+}
+
+button#next {
+    right: -1.1em;
+}
+
+button#prev {
+    left: -1.1em;
+}
+
+.testimonial-container p {
+    color: #8c8c90;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+}
+
+.testimonial-container img {
+    display: block;
+    margin: 1.8em auto 1.25em auto;
+    border-radius: 50%;
+    width: 7em;
+}
+
+.testimonial-container h3 {
+    color: #2d3d67;
+    font-size: 1em;
+    text-align: center;
+}
+
+.testimonial-container h6 {
+    color: #bcc4da;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    text-align: center;
+}
+
 /* -------- Footer -------- */
 
 footer {
@@ -305,3 +377,75 @@ footer p {
     padding: 0.5rem;
 }
 
+/* -------- Breakpoints -------- */
+
+@media only screen and (max-width: 1364px) {
+    .banner-logo {
+        min-width: 12.5rem;
+    }
+
+    .banner-profile-pic {
+        min-width: 12.5rem;
+    }
+}
+
+@media only screen and (max-width: 1220px) {
+    #services, 
+    #about-me,
+    #contact-info {
+        text-align: center;
+    }
+
+
+    .behavioural-support p,
+    .individual-coaching p,
+    .behavioural-support li,
+    .individual-coaching li {
+        text-align: start;
+    }
+
+    .services h2 {
+        margin: 0 auto;
+    }
+
+    .qualifications {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+    }
+
+    .memberships {
+        margin: 0;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .contact-info a {
+        margin: 20px auto;
+    }
+
+    .contact-form {
+        margin: 0 auto;
+        width: 77%;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    section {
+        width: 85%;
+    }
+
+    .about-me div {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .wrapper {
+      font-size: 14px;
+    }
+}
