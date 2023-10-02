@@ -32,6 +32,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .banner-text {
@@ -69,15 +70,23 @@ h6.banner-text {
 }
 
 .banner-logo {
+    position: absolute;
     width: 15vw;
-    height: auto;
-    margin: auto;
+    min-width: 15rem;
+    height: min-content;
+    border-radius: 50%;
+    top: 2vh;
+    left: 2vw;
 }
 
 .banner-profile-pic {
     width: 15vw;
-    height: auto;
-    margin: auto;
+    min-width: 15rem;
+    height: min-content;
+    border-radius: 50%;
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
 }
 
 #btn-container {
@@ -88,7 +97,12 @@ h6.banner-text {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    bottom: 10vh;
+    bottom: 5vh;
+}
+
+.btn {
+    margin: 20px;
+    min-width: 13rem;
 }
 
 .btn:link,
@@ -238,6 +252,10 @@ section.about-me {
     column-gap: 20px;
 }
 
+.contact-info img {
+    max-width: 100%;
+}
+
 .contact-form {
     width: 50%;
 }
@@ -257,10 +275,10 @@ section.about-me {
 }
 
 .happy-customers .container {
-    width: 70%;
+    width: 95%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: start;
 }
 
