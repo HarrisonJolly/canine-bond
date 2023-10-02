@@ -95,6 +95,7 @@ h6.banner-text {
 .btn:visited{
     display: block;
     text-decoration: none;
+    font-weight: bold;
     text-transform:uppercase;
     padding:20px 40px;
     border-radius:100px;
@@ -241,6 +242,8 @@ section.about-me {
     width: 50%;
 }
 
+/* -------- Testimonials -------- */
+
 .happy-customers {
     background-color: #80D7E8;
     width: 100%;
@@ -271,6 +274,8 @@ section.about-me {
     width: 75%;
 }
 
+/* -------- Footer -------- */
+
 footer {
     display: flex;
     flex-direction: row;
@@ -281,3 +286,4 @@ footer {
 footer p {
     padding: 0.5rem;
 }
+
