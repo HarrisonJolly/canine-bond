@@ -14,6 +14,7 @@ li {
     margin-left: 1rem;
 }
 
+
 /* -------- Banner -------- */
 
 .banner {
@@ -79,28 +80,80 @@ h6.banner-text {
     margin: auto;
 }
 
-button {
-    position: relative;
-    width: 11vw;
-    height: 6vh;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    text-decoration: none;
-    box-shadow: 0px 5px;
-    top: 14vh;
-    font-size: 2rem;
-    background-color: #80D7E8;
-  }
-   
-button:hover {
-    cursor: pointer;
+#btn-container {
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 10vh;
 }
-   
-button:active {
-    margin-top: 5px;
-    color: black;
-    box-shadow: 0px 0px;
+
+.btn:link,
+.btn:visited{
+    display: block;
+    text-decoration: none;
+    text-transform:uppercase;
+    padding:20px 40px;
+    border-radius:100px;
+    transition: all .5s;
+    width: 13rem;
+    text-align: center;
+}
+  
+.btn-white{
+    background:#fff;
+    color:#000;
+}
+  
+.btn:hover{
+     box-shadow:0px 10px 10px rgba(0,0,0,0.2);
+     transform : translateY(-3px);
+}
+  
+.btn:active{
+    box-shadow:0px 5px 10px rgba(0,0,0,0.2);
+    transform:translateY(-1px);
+}
+  
+.btn-bottom-animation-1{
+    animation:comeFromBottom 1s ease-out .8s;
+}
+  
+.btn::after{
+    content:"";
+    text-decoration: none;
+    text-transform:uppercase;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    border-radius:100px;
+    z-index:-1;
+    transition: all .5s;
+}
+  
+.btn-white::after {
+      background: #fff;
+}
+  
+.btn-animation-1:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+}
+  
+@keyframes comeFromBottom{
+    0%{
+      opacity:0;
+      transform:translateY(40px);
+    } 
+    100%{
+      opacity:1;
+      transform:translateY(0);
+    }
 }
 
 /* -------- Services -------- */
