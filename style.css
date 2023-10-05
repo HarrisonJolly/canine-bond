@@ -14,7 +14,69 @@ li {
     margin-left: 1rem;
 }
 
+/* -------- Header -------- */
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #4bc2da;
+    transition: height .5s ease-out;
+    z-index: 5;
+  }
 
+  .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    height: 200px;
+  }
+  
+  .menu li {
+    margin-top: .5em;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .menu a {
+    display: block;
+    padding: .5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .menu a:hover {
+    background-color: #0a69ed;
+    transition: 1s;
+  }
+
+  #toggle {
+    display: none;
+  }
+  
+  #toggle:checked ~ .menu {
+    height: 200px;
+  }
+
+  label {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 6;
+    font-size: 48px;
+    color: #0a69ed;
+    padding: 1rem;
+}
 /* -------- Banner -------- */
 
 .banner {
@@ -32,6 +94,7 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .banner-text {
@@ -69,15 +132,23 @@ h6.banner-text {
 }
 
 .banner-logo {
+    position: absolute;
     width: 15vw;
-    height: auto;
-    margin: auto;
+    min-width: 15rem;
+    height: min-content;
+    border-radius: 50%;
+    top: 2vh;
+    left: 2vw;
 }
 
 .banner-profile-pic {
     width: 15vw;
-    height: auto;
-    margin: auto;
+    min-width: 15rem;
+    height: min-content;
+    border-radius: 50%;
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
 }
 
 #btn-container {
@@ -88,7 +159,12 @@ h6.banner-text {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    bottom: 10vh;
+    bottom: 5vh;
+}
+
+.btn {
+    margin: 20px;
+    min-width: 13rem;
 }
 
 .btn:link,
@@ -205,6 +281,10 @@ section.about-me {
 
 }
 
+.memberships {
+    width: 100%;
+}
+
 .qualifications {
     display: flex;
     max-width: 100%;
@@ -213,21 +293,21 @@ section.about-me {
     height: auto;
 }
 
-.qualifications img {
+.qual-icons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.qual-icons img {
+    display: inline-block;
     width: 150px;
     height: 150px;
     margin: 5px;
-}
-
-.memberships {
-    min-width: 500px;
-}
-
-.qual-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .contact-info {
@@ -236,6 +316,10 @@ section.about-me {
     justify-content: start;
     align-items: start;
     column-gap: 20px;
+}
+
+.contact-info img {
+    max-width: 100%;
 }
 
 .contact-form {
@@ -252,26 +336,77 @@ section.about-me {
     align-items: center;
 }
 
-.happy-customers h2 {
-    margin-bottom: 20px;
-}
-
-.happy-customers .container {
-    width: 70%;
+.wrapper {
+    background-color: #ffffff;
+    position: relative;
+    width: 80vw;
+    max-width: 41em;
+    min-height: 25em;
+    border-radius: 0.6em;
+    box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
+    margin-top: 1rem;
 }
 
-.testimonial {
-    max-width: 20%;
-    margin: 20px;
+.wrapper button {
+    font-size: 1.8em;
+    height: 2.2em;
+    width: 2.2em;
+    background-color: #ffffff;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+    color: #0a69ed;
+    box-shadow: 0 0 1em rgba(1, 17, 39, 0.25);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.testimonial-container {
+    width: 85%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    padding: 1.8em 1.2em;
+}
+
+button#next {
+    right: -1.1em;
+}
+
+button#prev {
+    left: -1.1em;
+}
+
+.testimonial-container p {
+    color: #8c8c90;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+}
+
+.testimonial-container img {
+    display: block;
+    margin: 1.8em auto 1.25em auto;
+    border-radius: 50%;
+    width: 7em;
+}
+
+.testimonial-container h3 {
+    color: #2d3d67;
+    font-size: 1em;
     text-align: center;
 }
 
-.testimonial img {
-    width: 75%;
+.testimonial-container h6 {
+    color: #bcc4da;
+    font-size: 0.9em;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+    text-align: center;
 }
 
 /* -------- Footer -------- */
@@ -287,3 +422,185 @@ footer p {
     padding: 0.5rem;
 }
 
+/* -------- Breakpoints -------- */
+@media screen and (max-width: 650px) {
+    .banner-logo {
+        display: none;
+    }
+
+    .banner-profile-pic {
+        display: none;
+    }
+
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .banner-logo {
+        top: unset;
+        bottom: 2vh;
+    }
+    
+    .banner-profile-pic {
+        top: unset;
+        bottom: 2vh;
+    }
+
+    #btn-container {
+        display: none;
+    }
+    .menu {
+        display: block;
+    }
+
+    label {
+        display: block;
+    }
+
+    .services {
+        width: 85%;
+    }
+
+    .about-me div {
+        width: 85%;
+    }
+
+    .qual-icons img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .contact-info {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    h1.banner-text {
+        font-size: 2.5rem;
+    }
+    
+    h2.banner-text {
+        font-size: 2rem;
+    }
+    
+    h4.banner-text {
+        font-size: 1.5rem;
+    }
+    
+    h5.banner-text {
+        font-size: 1rem;
+    }
+    
+    h6.banner-text {
+        font-size: 1rem;
+    }
+
+    .btn {
+        margin: 10px;
+        font-size: smaller;
+        width: 7rem;
+        text-align: center\;
+    }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1000px) {
+    section {
+        width: 85%;
+    }
+
+    .about-me div {
+        width: 85%;
+    }
+
+    .qual-icons img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 1220px) {
+    #services, 
+    #about-me,
+    #contact-info {
+        text-align: center;
+    }
+
+
+    .behavioural-support p,
+    .individual-coaching p,
+    .behavioural-support li,
+    .individual-coaching li {
+        text-align: start;
+    }
+
+    .services h2 {
+        margin: 0 auto;
+    }
+
+    .qualifications {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
+    }
+    .qual-icons {
+        width: 150px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .contact-info a {
+        margin: 20px auto;
+    }
+
+    .contact-form {
+        margin: 0 auto;
+        width: 77%;
+    }
+
+}
+
+@media only screen and (max-width: 1364px) {
+    .banner-logo {
+        min-width: 12.5rem;
+    }
+
+    .banner-profile-pic {
+        min-width: 12.5rem;
+    }
+
+    #btn-container {
+        bottom: 3vh;
+        width: 100%;
+        height: 150px
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 750px) {
+    .banner-logo {
+        display: none;
+    }
+
+    .banner-profile-pic {
+        display: none;
+    }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 650px) {
+    .menu {
+        display: block;
+    }
+
+    label {
+        display: block;
+    }
+
+    #btn-container {
+        display: none;
+    }
+}
