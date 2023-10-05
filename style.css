@@ -20,7 +20,7 @@ li {
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("C:/professional-area/projects/web-development/canine-bond/images/anna-dudkova-urs_y9NwFcc-unsplash.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("images\\anna-dudkova-urs_y9NwFcc-unsplash.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
