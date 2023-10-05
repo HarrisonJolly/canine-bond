@@ -15,11 +15,68 @@ li {
 }
 
 /* -------- Header -------- */
-
-.navbar {
+.menu {
     display: none;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #4bc2da;
+    transition: height .5s ease-out;
+    z-index: 5;
+  }
 
+  .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    height: 200px;
+  }
+  
+  .menu li {
+    margin-top: .5em;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .menu a {
+    display: block;
+    padding: .5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .menu a:hover {
+    background-color: #0a69ed;
+    transition: 1s;
+  }
+
+  #toggle {
+    display: none;
+  }
+  
+  #toggle:checked ~ .menu {
+    height: 200px;
+  }
+
+  label {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 6;
+    font-size: 48px;
+    color: #0a69ed;
+    padding: 1rem;
+}
 /* -------- Banner -------- */
 
 .banner {
@@ -224,6 +281,10 @@ section.about-me {
 
 }
 
+.memberships {
+    width: 100%;
+}
+
 .qualifications {
     display: flex;
     max-width: 100%;
@@ -232,21 +293,21 @@ section.about-me {
     height: auto;
 }
 
-.qualifications img {
+.qual-icons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.qual-icons img {
+    display: inline-block;
     width: 150px;
     height: 150px;
     margin: 5px;
-}
-
-.memberships {
-    min-width: 500px;
-}
-
-.qual-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .contact-info {
@@ -275,28 +336,6 @@ section.about-me {
     align-items: center;
 }
 
-.happy-customers h2 {
-    margin-bottom: 20px;
-}
-
-.happy-customers .container {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
-}
-
-.testimonial {
-    max-width: 20%;
-    margin: 20px;
-    text-align: center;
-}
-
-.testimonial img {
-    width: 75%;
-}
-
 .wrapper {
     background-color: #ffffff;
     position: relative;
@@ -306,6 +345,7 @@ section.about-me {
     border-radius: 0.6em;
     box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
     display: flex;
+    margin-top: 1rem;
 }
 
 .wrapper button {
@@ -391,25 +431,10 @@ footer p {
     .banner-profile-pic {
         display: none;
     }
-}
 
-@media screen and (max-width: 650px) {
     html {
         font-size: 14px;
     }
-
-    .qualifications img {
-        width: 100px;
-        height: 100px;
-    }
-
-    #qual-icons {
-        width: 100vw;
-        margin: 0 auto;
-    }
-    /* .wrapper {
-      font-size: 14px;
-    } */
 }
 
 @media only screen and (max-width: 700px) {
@@ -426,57 +451,30 @@ footer p {
     #btn-container {
         display: none;
     }
-
-    .navbar {
-        width: 100%;
-        margin: 0 auto;
-        padding: 35px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        top: 0;
-        left: 0;
+    .menu {
+        display: block;
     }
 
-    .navbar ul {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 10px;
+    label {
+        display: block;
     }
-    
-    .navbar ul li {
-        list-style-type: none;
-        display: inline-block;
-        margin: 0;
-        width: 121px;
-        position: relative;
+
+    .services {
+        width: 85%;
     }
-    
-    .navbar ul li::after {
-        content: '';
-        height: 3px;
-        width: 0;
-        background-color: #80D7E8;
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        transition: 0.5s;
+
+    .about-me div {
+        width: 85%;
     }
-    
-    .navbar ul li:hover::after {
-        width: 100%;
+
+    .qual-icons img {
+        width: 75px;
+        height: 75px;
     }
-    
-    .navbar ul li a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #fff;
-        text-transform: uppercase;
-        margin: 0 auto;
+
+    .contact-info {
+        width: 85%;
     }
-    
 }
 
 @media only screen and (max-width: 880px) {
@@ -508,13 +506,18 @@ footer p {
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 701px) and (max-width: 1000px) {
     section {
         width: 85%;
     }
 
     .about-me div {
         width: 85%;
+    }
+
+    .qual-icons img {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -543,9 +546,8 @@ footer p {
         justify-content: start;
         width: 100%;
     }
-
-    .memberships {
-        margin: 0;
+    .qual-icons {
+        width: 150px;
     }
 
     .contact-info {
@@ -579,8 +581,26 @@ footer p {
     }
 }
 
+@media only screen and (orientation: landscape) and (max-height: 750px) {
+    .banner-logo {
+        display: none;
+    }
 
+    .banner-profile-pic {
+        display: none;
+    }
+}
 
+@media only screen and (orientation: landscape) and (max-height: 650px) {
+    .menu {
+        display: block;
+    }
 
+    label {
+        display: block;
+    }
 
-
+    #btn-container {
+        display: none;
+    }
+}
