@@ -14,6 +14,7 @@ li {
     margin-left: 1rem;
 }
 
+
 /* -------- Header -------- */
 .menu {
     display: none;
@@ -236,13 +237,14 @@ h6.banner-text {
 /* -------- Services -------- */
 
 section {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    padding: 1rem;
-    width: 70%;
-    margin: 5vh auto;
+    padding: 5vh 15%;
+    width: 100%;
+    margin: 0 auto;
     font-size: 1.25rem;
 }
 
@@ -275,14 +277,15 @@ section.about-me {
 }
 
 .about-me div {
-    width: 70%;
-    margin: 1rem auto;
+    margin: 0 auto;
     justify-content: start;
+    padding: 1rem 0;
 
 }
 
 .memberships {
     width: 100%;
+    min-width: 600px;
 }
 
 .qualifications {
@@ -297,7 +300,7 @@ section.about-me {
     display: flex;
     flex-direction: row;
     width: 100%;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -310,12 +313,15 @@ section.about-me {
     margin: 5px;
 }
 
+/* -------- Contact Info --------- */
+
 .contact-info {
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: start;
     column-gap: 20px;
+    background-color: #80D7E8;
 }
 
 .contact-info img {
@@ -329,7 +335,7 @@ section.about-me {
 /* -------- Testimonials -------- */
 
 .happy-customers {
-    background-color: #80D7E8;
+    background-color: #fff;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -435,6 +441,15 @@ footer p {
     html {
         font-size: 14px;
     }
+    section {
+        padding: 5vh 0;
+    }
+
+    .qualifications {
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -464,7 +479,7 @@ footer p {
     }
 
     .about-me div {
-        width: 85%;
+        width: 95%;
     }
 
     .qual-icons img {
@@ -473,7 +488,7 @@ footer p {
     }
 
     .contact-info {
-        width: 85%;
+        width: 100%;
     }
 }
 
@@ -522,6 +537,9 @@ footer p {
 }
 
 @media only screen and (max-width: 1220px) {
+    section {
+        padding: 5vh 5%;
+    }
     #services, 
     #about-me,
     #contact-info {
@@ -540,14 +558,13 @@ footer p {
         margin: 0 auto;
     }
 
-    .qualifications {
-        flex-direction: column;
-        align-items: start;
-        justify-content: start;
-        width: 100%;
-    }
     .qual-icons {
         width: 150px;
+        flex-wrap: nowrap;
+    }
+
+    .memberships {
+        min-width: unset;
     }
 
     .contact-info {
@@ -578,6 +595,13 @@ footer p {
         bottom: 3vh;
         width: 100%;
         height: 150px
+    }
+
+    .qualifications {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        width: 100%;
     }
 }
 
