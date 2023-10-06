@@ -43,7 +43,7 @@ const testimonials = [
   let displayTestimonial = () => {
     testimonialContainer.innerHTML = `
       <p>${testimonials[i].testimonial}</p>
-      <img src=${testimonials[i].image}>
+      <img src=${testimonials[i].image} alt="Happy Customer">
     `;
   };
   window.onload = displayTestimonial;
