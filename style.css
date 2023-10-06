@@ -77,6 +77,7 @@ li {
     font-size: 48px;
     color: #0a69ed;
     padding: 1rem;
+    z-index: 5;
 }
 /* -------- Banner -------- */
 
@@ -277,7 +278,7 @@ section.about-me {
 }
 
 .about-me div {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     justify-content: start;
     padding: 1rem 0;
 
@@ -555,6 +556,10 @@ footer p {
     }
 
     .services h2 {
+        margin: 0 auto;
+    }
+
+    .about-me div {
         margin: 0 auto;
     }
 
