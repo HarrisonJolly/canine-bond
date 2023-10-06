@@ -1,22 +1,22 @@
 //Testimonial Data
 const testimonials = [
     {
-      image: "images\\happy-customer1.jpg",
+      image: "images\\happy-customer1.webp",
       testimonial:
       "We have just completed our Puppy training with Donna, I can not recommend her enough. Penny loved her lessons and I feel like I've learnt so much as well, Donna was very knowledgeable and helpful.",
     },
     {
-      image: "images\\happy-customer2.jpg",
+      image: "images\\happy-customer2.webp",
       testimonial:
       "After a few sessions with Donna I feel so much more confident with Kobi. He has definitely lacked confidence in some situations and Donna has helped me manage them in a calm and relaxed way.",
     },
     {
-      image: "images\\happy-customer3.jpg",
+      image: "images\\happy-customer3.webp",
       testimonial:
         "Donna has been helping Tess and I deal with reactivity around other dogs, she has made a huge difference it has been a great experience and I would absolutely recommend her for any training needs, thank you for all your help!",
     },
     {
-      image: "images\\\happy-customer4.jpg",
+      image: "images\\\happy-customer4.webp",
       testimonial:
       "Donna, has been amazing with our two very anxious dachshunds. With Donna’s advice and guidance, we are starting to see positive changes in our dogs behaviour. Highly recommended!",
     },
