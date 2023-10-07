@@ -48,10 +48,19 @@ const testimonials = [
   };
   window.onload = displayTestimonial;
 
-  document.querySelectorAll('.menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.getElementById('toggle').checked = false;
-    });
-});
+//   document.querySelectorAll('.menu a').forEach(link => {
+//     link.addEventListener('click', () => {
+//         document.getElementById('toggle').checked = false;
+//     });
+// });
 
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 
