@@ -1,3 +1,19 @@
+/* Montserrat */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Medium.woff2') format('woff2'),
+         url('fonts/Montserrat-Medium.woff') format('woff'),
+         url('fonts/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Bold.woff2') format('woff2'),
+         url('fonts/Montserrat-Bold.woff') format('woff'),
+         url('fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -111,6 +127,8 @@ li {
   .menu li a {
     text-decoration: none;
     color: #fff;
+    width: 100%;
+    text-align: center;
   }
 
   .menu li:hover {
